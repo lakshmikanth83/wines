@@ -8,12 +8,11 @@ jobs:
     # optionally use a convenient Ubuntu LTS + DVC + CML image
     # container: docker://ghcr.io/iterative/cml:0-dvc2-base1
     steps:
-      - uses: actions/checkout@v2
-     
-      - name: cml_run
+     - uses: actions/checkout@v2
+     - name: cml_run
       
-      env:
-       repo_token: ${{secrets.GITHUB_TOKEN}}
+       env:
+         repo_token: ${{secrets.GITHUB_TOKEN}}
       
         run: |
           # Your ML workflow goes here
